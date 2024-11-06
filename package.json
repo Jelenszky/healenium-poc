@@ -1,0 +1,31 @@
+{
+    "name": "healenium-poc",
+    "version": "1.0.0",
+    "description": "To make it easy for you to get started with GitLab, here's a list of recommended next steps.",
+    "main": "index.js",
+    "scripts": {
+        "clean": "rimraf ./output",
+        "wd-update": "npx webdriver-manager update",
+        "wd-start": "npx webdriver-manager start",
+        "test:all": "npm run clean && codeceptjs run --features --verbose",
+        "test": "npm run clean && npx codeceptjs run --grep '(?=.*)^(?!.*@experiment)'",
+        "test:dev": "npm run clean && npx codeceptjs run --grep '@current'"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@cucumber/cucumber": "11.0.0",
+        "codeceptjs": "3.6.5",
+        "playwright": "1.45.3",
+        "webdriver-manager": "12.1.9",
+        "webdriverio": "8.40.0"
+    },
+    "dependencies": {
+        "chai": "4.3.4",
+        "chromedriver": "127.0.2",
+        "codeceptjs-cucumber": "5.0.0",
+        "mocha": "10.7.3",
+        "selenium-webdriver": "4.23.0",
+        "wait-on": "7.2.0"
+    }
+}
